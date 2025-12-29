@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int count_total_digits (int num);
+void count_total_digits (int num);
 
 int main()
 {
@@ -8,17 +8,14 @@ int main()
     printf ("Enter your number: ");
     scanf ("%d", & x);
     
-    int result = count_total_digits (x);
-    printf ("%d", result);
-    
-    return 0;
+    count_total_digits (x);
 }
 
-int count_total_digits (int num){
+void count_total_digits (int num){
     int count = 0;
     while (num > 0){
         num = num/10;
         count++;
     }
-    return count;
+    printf ("%d", count);
 }
